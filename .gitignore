@@ -1,0 +1,56 @@
+# =============================================
+# CeylonCare AI .gitignore
+# =============================================
+
+# Environment variables & API keys (CRITICAL: DO NOT COMMIT)
+.env
+.env.local
+.env.*.local
+
+# Python virtual environment & cache
+.venv/
+venv/
+env/
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+
+# Streamlit local secrets (NEVER commit this)
+.streamlit/secrets.toml
+.streamlit/*.log
+
+# Vector store cache (rebuilt on first run via build_knowledge_base_minilm.py)
+data/chroma/
+data/chroma_minilm/
+
+# Logs and OS artifacts
+*.log
+.DS_Store
+Thumbs.db
+
+# Zip archives
+*.zip
+*.tar.gz
+*.rar
+
+# Jupyter checkpoints
+.ipynb_checkpoints
+
+# ML model artifacts (too large for GitHub free tier)
+*.pkl
+*.joblib
+*.h5
+*.bin
+*.safetensors
+models/
+
+# Torch cache
+*.pt
+
+# IDE folders
+.vscode/
+.idea/
+
+# Node (if any tooling added)
+node_modules/

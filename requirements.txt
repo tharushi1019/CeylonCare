@@ -1,0 +1,41 @@
+# CeylonCare Agentic AI System - Production Dependencies
+# IT4321 Final Year Undergraduate Project
+# -----------------------------------------------------------
+# Core LLM & Agent Frameworks
+langchain>=0.3.0,<2.0.0
+langchain-core>=0.3.0
+langchain-google-genai>=2.0.0
+langchain-groq>=0.2.0
+langchain-chroma>=0.1.0
+langchain-huggingface>=0.1.0
+langgraph>=0.2.0
+langgraph-checkpoint>=1.0.0
+langsmith>=0.1.0
+
+# LLM Provider SDKs
+google-genai>=1.0.0
+groq>=0.9.0
+
+# RAG & Vector Database
+chromadb>=0.5.0
+sentence-transformers>=3.0.0
+
+# Machine Learning (Task C: Predictive Risk Analytics)
+scikit-learn>=1.5.0
+numpy>=1.26.0
+pandas>=2.0.0
+
+# Deep Learning (Sentence Transformers backbone)
+torch>=2.1.0
+transformers>=4.40.0
+
+# Streamlit Frontend
+streamlit>=1.35.0
+
+# Data & Utilities
+python-dotenv>=1.0.0
+requests>=2.31.0
+pillow>=10.0.0
+
+# PDF/Report Generation
+reportlab>=4.0.0

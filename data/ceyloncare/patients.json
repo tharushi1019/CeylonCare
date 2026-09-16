@@ -1,0 +1,232 @@
+{
+    "users": [
+        {
+            "user_id": "OP001",
+            "email": "operator@ceyloncare.lk",
+            "password": "admin",
+            "role": "operator",
+            "name": "Sister Kamala Wijesinghe (Chief Triage Operator)",
+            "branch": "Colombo Central Hospital"
+        }
+    ],
+    "patients": [
+        {
+            "patient_id": "P001",
+            "name": "Nimal Perera",
+            "email": "nimal@example.com",
+            "password": "password123",
+            "date_of_birth": "1990-05-15",
+            "phone": "0771234567",
+            "gender": "Male",
+            "city": "Colombo",
+            "blood_group": "B+",
+            "chronic_conditions": ["Hypertension"],
+            "emergency_contact": "Sunila Perera (Wife) - 0779876543"
+        },
+        {
+            "patient_id": "P002",
+            "name": "Sunethra Silva",
+            "email": "sunethra.s@example.com",
+            "password": "password123",
+            "date_of_birth": "1965-11-20",
+            "phone": "0712345678",
+            "gender": "Female",
+            "city": "Kandy",
+            "blood_group": "O+",
+            "chronic_conditions": ["Type 2 Diabetes", "Coronary Artery Disease"],
+            "emergency_contact": "Rohan Silva (Son) - 0718765432"
+        },
+        {
+            "patient_id": "P003",
+            "name": "Kasun Fernando",
+            "email": "kasun.f@example.com",
+            "password": "password123",
+            "date_of_birth": "1998-03-12",
+            "phone": "0753456789",
+            "gender": "Male",
+            "city": "Galle",
+            "blood_group": "A+",
+            "chronic_conditions": ["Allergic Asthma"],
+            "emergency_contact": "Dilini Fernando (Sister) - 0757654321"
+        },
+        {
+            "patient_id": "P004",
+            "name": "Anula Jayawardena",
+            "email": "anula.j@example.com",
+            "password": "password123",
+            "date_of_birth": "1958-08-04",
+            "phone": "0724567890",
+            "gender": "Female",
+            "city": "Colombo",
+            "blood_group": "AB+",
+            "chronic_conditions": ["Osteoarthritis", "Hypertension"],
+            "emergency_contact": "Mahesh Jayawardena (Son) - 0729876543"
+        },
+        {
+            "patient_id": "P005",
+            "name": "Dinesh Senanayake",
+            "email": "dinesh.s@example.com",
+            "password": "password123",
+            "date_of_birth": "1982-01-30",
+            "phone": "0785678901",
+            "gender": "Male",
+            "city": "Kandy",
+            "blood_group": "B-",
+            "chronic_conditions": ["Migraine"],
+            "emergency_contact": "Champa Senanayake (Wife) - 0781234567"
+        },
+        {
+            "patient_id": "P006",
+            "name": "Fatima Rizwan",
+            "email": "fatima.r@example.com",
+            "password": "password123",
+            "date_of_birth": "1994-09-18",
+            "phone": "0776789012",
+            "gender": "Female",
+            "city": "Colombo",
+            "blood_group": "O-",
+            "chronic_conditions": ["Eczema / Contact Dermatitis"],
+            "emergency_contact": "Rizwan Mohamed (Husband) - 0772345678"
+        },
+        {
+            "patient_id": "P007",
+            "name": "Kavinda Wickramasinghe",
+            "email": "kavinda.w@example.com",
+            "password": "password123",
+            "date_of_birth": "2001-07-25",
+            "phone": "0767890123",
+            "gender": "Male",
+            "city": "Galle",
+            "blood_group": "A-",
+            "chronic_conditions": [],
+            "emergency_contact": "Premasiri Wickramasinghe (Father) - 0763456789"
+        },
+        {
+            "patient_id": "P008",
+            "name": "Manel Kumari",
+            "email": "manel.k@example.com",
+            "password": "password123",
+            "date_of_birth": "1973-12-10",
+            "phone": "0718901234",
+            "gender": "Female",
+            "city": "Kandy",
+            "blood_group": "B+",
+            "chronic_conditions": ["Hypothyroidism", "Dyslipidemia"],
+            "emergency_contact": "Bandula Kumari (Husband) - 0714567890"
+        },
+        {
+            "patient_id": "P009",
+            "name": "Suren De Alwis",
+            "email": "suren.a@example.com",
+            "password": "password123",
+            "date_of_birth": "1988-04-05",
+            "phone": "0759012345",
+            "gender": "Male",
+            "city": "Colombo",
+            "blood_group": "O+",
+            "chronic_conditions": ["Gastritis"],
+            "emergency_contact": "Sanduni De Alwis (Wife) - 0755678901"
+        },
+        {
+            "patient_id": "P010",
+            "name": "Nadeeka Ratnayake",
+            "email": "nadeeka.r@example.com",
+            "password": "password123",
+            "date_of_birth": "1961-06-14",
+            "phone": "0701234567",
+            "gender": "Female",
+            "city": "Galle",
+            "blood_group": "AB-",
+            "chronic_conditions": ["Chronic Kidney Disease Stage 2", "Hypertension"],
+            "emergency_contact": "Asanka Ratnayake (Son) - 0709876543"
+        }
+    ],
+    "appointments": [
+        {
+            "appointment_id": "APT-1001",
+            "patient_id": "P001",
+            "doctor": "Dr. K. Perera",
+            "specialist": "Cardiologist",
+            "branch": "Colombo Central Hospital",
+            "date": "2026-09-21",
+            "time": "10:00 AM",
+            "status": "confirmed"
+        },
+        {
+            "appointment_id": "APT-1002",
+            "patient_id": "P002",
+            "doctor": "Dr. U. Senaratne",
+            "specialist": "Cardiologist",
+            "branch": "Kandy Specialty Center",
+            "date": "2026-09-23",
+            "time": "11:00 AM",
+            "status": "confirmed"
+        },
+        {
+            "appointment_id": "APT-1003",
+            "patient_id": "P003",
+            "doctor": "Dr. C. Mendis",
+            "specialist": "General Physician",
+            "branch": "Galle Coastal Medical Center",
+            "date": "2026-09-22",
+            "time": "09:30 AM",
+            "status": "confirmed"
+        },
+        {
+            "appointment_id": "APT-1004",
+            "patient_id": "P006",
+            "doctor": "Dr. T. Abeywardena",
+            "specialist": "Dermatologist",
+            "branch": "Colombo Central Hospital",
+            "date": "2026-09-24",
+            "time": "02:00 PM",
+            "status": "confirmed"
+        }
+    ],
+    "visit_history": [
+        {
+            "visit_id": "VIS-001",
+            "patient_id": "P001",
+            "date": "2026-08-10",
+            "department": "Cardiology",
+            "doctor": "Dr. K. Perera",
+            "branch": "Colombo Central Hospital",
+            "reason": "Routine hypertension check and ECG evaluation.",
+            "summary": "Blood pressure recorded at 135/85 mmHg. Normal sinus rhythm on resting ECG. Maintained current ACE-inhibitor dosage.",
+            "outcome": "Scheduled 6-week follow-up. Lifestyle salt restriction reinforced."
+        },
+        {
+            "visit_id": "VIS-002",
+            "patient_id": "P002",
+            "date": "2026-07-15",
+            "department": "Endocrinology & Cardiology",
+            "doctor": "Dr. U. Senaratne",
+            "branch": "Kandy Specialty Center",
+            "reason": "Post-admission cardiac evaluation & HbA1c review.",
+            "summary": "HbA1c was 7.4%. Patient reported mild exertion dyspnea. Echocardiogram shows preserved LVEF 58%. Adjusted Metformin and Beta-blocker.",
+            "outcome": "Advised cardiac rehabilitation exercise plan and routine lipid panel."
+        },
+        {
+            "visit_id": "VIS-003",
+            "patient_id": "P003",
+            "date": "2026-06-28",
+            "department": "Pulmonology / OPD",
+            "doctor": "Dr. C. Mendis",
+            "branch": "Galle Coastal Medical Center",
+            "reason": "Asthma exacerbation during monsoon season.",
+            "summary": "Wheezing on bilateral lung fields. Peak expiratory flow improved after Salbutamol nebulization. Prescribed inhaled corticosteroid.",
+            "outcome": "Discharged home with Asthma Action Plan."
+        },
+        {
+            "visit_id": "VIS-004",
+            "patient_id": "P004",
+            "date": "2026-08-02",
+            "department": "Orthopedics",
+            "doctor": "Dr. H. Rathnayake",
+            "branch": "Kandy Specialty Center",
+            "reason": "Bilateral knee pain and joint stiffness.",
+            "summary": "Mild crepitus in both knees, joint space narrowing on bilateral standing X-rays. Administered intra-articular gel injection in right knee.",
+            "outcome": "Physiotherapy regimen initiated. Review in 3 months."
+        }
+    ]
+}

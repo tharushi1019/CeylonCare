@@ -1,0 +1,189 @@
+{
+    "branches": [
+        {
+            "branch_id": "COL-01",
+            "name": "Colombo Central Hospital",
+            "city": "Colombo",
+            "address": "124 Park Road, Colombo 05",
+            "phone": "+94 11 250 9000",
+            "hotline": "1330",
+            "emergency_24_7": true
+        },
+        {
+            "branch_id": "KAN-02",
+            "name": "Kandy Specialty Center",
+            "city": "Kandy",
+            "address": "45 Peradeniya Road, Kandy",
+            "phone": "+94 81 223 4500",
+            "hotline": "1330",
+            "emergency_24_7": true
+        },
+        {
+            "branch_id": "GAL-03",
+            "name": "Galle Coastal Medical Center",
+            "city": "Galle",
+            "address": "88 Matara Road, Galle",
+            "phone": "+94 91 224 8800",
+            "hotline": "1330",
+            "emergency_24_7": false
+        }
+    ],
+    "doctors": [
+        {
+            "doctor_id": "DOC-001",
+            "name": "Dr. K. Perera",
+            "specialty": "Cardiologist",
+            "department": "Cardiology",
+            "branch": "Colombo Central Hospital",
+            "schedule": "Monday, Wednesday, Friday: 9:00 AM - 1:00 PM",
+            "days": ["Monday", "Wednesday", "Friday"],
+            "hours": "9:00 AM - 1:00 PM",
+            "consultation_fee": 4500,
+            "room": "Room 102, Cardiology Wing"
+        },
+        {
+            "doctor_id": "DOC-002",
+            "name": "Dr. S. Fernando",
+            "specialty": "Cardiologist",
+            "department": "Cardiology",
+            "branch": "Colombo Central Hospital",
+            "schedule": "Tuesday, Thursday: 2:00 PM - 6:00 PM",
+            "days": ["Tuesday", "Thursday"],
+            "hours": "2:00 PM - 6:00 PM",
+            "consultation_fee": 4500,
+            "room": "Room 104, Cardiology Wing"
+        },
+        {
+            "doctor_id": "DOC-003",
+            "name": "Dr. N. Jayasinghe",
+            "specialty": "General Physician",
+            "department": "General Medicine",
+            "branch": "Colombo Central Hospital",
+            "schedule": "Monday to Friday: 8:30 AM - 4:30 PM",
+            "days": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+            "hours": "8:30 AM - 4:30 PM",
+            "consultation_fee": 2500,
+            "room": "Room 201, OPD Wing"
+        },
+        {
+            "doctor_id": "DOC-004",
+            "name": "Dr. A. Silva",
+            "specialty": "General Physician",
+            "department": "General Medicine",
+            "branch": "Colombo Central Hospital",
+            "schedule": "Monday to Saturday: 9:00 AM - 2:00 PM",
+            "days": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+            "hours": "9:00 AM - 2:00 PM",
+            "consultation_fee": 2500,
+            "room": "Room 203, OPD Wing"
+        },
+        {
+            "doctor_id": "DOC-005",
+            "name": "Dr. M. De Silva",
+            "specialty": "Pediatrician",
+            "department": "Pediatrics",
+            "branch": "Colombo Central Hospital",
+            "schedule": "Tuesday, Thursday, Saturday: 9:00 AM - 12:30 PM",
+            "days": ["Tuesday", "Thursday", "Saturday"],
+            "hours": "9:00 AM - 12:30 PM",
+            "consultation_fee": 3500,
+            "room": "Room 305, Pediatrics Unit"
+        },
+        {
+            "doctor_id": "DOC-006",
+            "name": "Dr. R. Wickramasinghe",
+            "specialty": "Neurologist",
+            "department": "Neurology",
+            "branch": "Colombo Central Hospital",
+            "schedule": "Wednesday, Saturday: 2:00 PM - 5:00 PM",
+            "days": ["Wednesday", "Saturday"],
+            "hours": "2:00 PM - 5:00 PM",
+            "consultation_fee": 5500,
+            "room": "Room 401, Neurosciences Suite"
+        },
+        {
+            "doctor_id": "DOC-007",
+            "name": "Dr. T. Abeywardena",
+            "specialty": "Dermatologist",
+            "department": "Dermatology",
+            "branch": "Colombo Central Hospital",
+            "schedule": "Monday, Thursday: 1:00 PM - 4:00 PM",
+            "days": ["Monday", "Thursday"],
+            "hours": "1:00 PM - 4:00 PM",
+            "consultation_fee": 4000,
+            "room": "Room 108, Dermatology Clinic"
+        },
+        {
+            "doctor_id": "DOC-008",
+            "name": "Dr. P. Bandara",
+            "specialty": "General Physician",
+            "department": "General Medicine",
+            "branch": "Kandy Specialty Center",
+            "schedule": "Monday to Friday: 9:00 AM - 3:00 PM",
+            "days": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+            "hours": "9:00 AM - 3:00 PM",
+            "consultation_fee": 2500,
+            "room": "Room K101, OPD"
+        },
+        {
+            "doctor_id": "DOC-009",
+            "name": "Dr. H. Rathnayake",
+            "specialty": "Orthopedic Surgeon",
+            "department": "Orthopedics",
+            "branch": "Kandy Specialty Center",
+            "schedule": "Tuesday, Friday: 10:00 AM - 2:00 PM",
+            "days": ["Tuesday", "Friday"],
+            "hours": "10:00 AM - 2:00 PM",
+            "consultation_fee": 5000,
+            "room": "Room K204, Surgical Wing"
+        },
+        {
+            "doctor_id": "DOC-010",
+            "name": "Dr. U. Senaratne",
+            "specialty": "Cardiologist",
+            "department": "Cardiology",
+            "branch": "Kandy Specialty Center",
+            "schedule": "Wednesday, Saturday: 9:00 AM - 1:00 PM",
+            "days": ["Wednesday", "Saturday"],
+            "hours": "9:00 AM - 1:00 PM",
+            "consultation_fee": 4500,
+            "room": "Room K105, Heart Clinic"
+        },
+        {
+            "doctor_id": "DOC-011",
+            "name": "Dr. C. Mendis",
+            "specialty": "General Physician",
+            "department": "General Medicine",
+            "branch": "Galle Coastal Medical Center",
+            "schedule": "Monday to Saturday: 8:30 AM - 1:30 PM",
+            "days": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+            "hours": "8:30 AM - 1:30 PM",
+            "consultation_fee": 2200,
+            "room": "Room G01, Outpatients"
+        },
+        {
+            "doctor_id": "DOC-012",
+            "name": "Dr. D. Alwis",
+            "specialty": "ENT Specialist",
+            "department": "Otolaryngology (ENT)",
+            "branch": "Galle Coastal Medical Center",
+            "schedule": "Tuesday, Thursday: 1:00 PM - 5:00 PM",
+            "days": ["Tuesday", "Thursday"],
+            "hours": "1:00 PM - 5:00 PM",
+            "consultation_fee": 3800,
+            "room": "Room G08, ENT Suite"
+        },
+        {
+            "doctor_id": "DOC-013",
+            "name": "Dr. K. Gunasekara",
+            "specialty": "Dermatologist",
+            "department": "Dermatology",
+            "branch": "Galle Coastal Medical Center",
+            "schedule": "Friday, Saturday: 9:00 AM - 1:00 PM",
+            "days": ["Friday", "Saturday"],
+            "hours": "9:00 AM - 1:00 PM",
+            "consultation_fee": 3800,
+            "room": "Room G05, Skin Clinic"
+        }
+    ]
+}
