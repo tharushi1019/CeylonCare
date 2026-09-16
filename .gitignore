@@ -37,6 +37,10 @@ Thumbs.db
 # Jupyter checkpoints
 .ipynb_checkpoints
 
+# Assignment Files
+*.html
+*_files/
+
 # ML model artifacts (too large for GitHub free tier)
 *.pkl
 *.joblib
