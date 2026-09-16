@@ -324,7 +324,7 @@ if curr_role == "patient":
         if p_col2.button("📅 Book appointment with Dr. Perera"):
             quick_prompt = "I want to book an appointment with Dr. Perera tomorrow at 10 AM"
         if p_col3.button("🩺 Check my symptoms"):
-            quick_prompt = "I have a mild fever and headache for two days. What should I do?"
+            quick_prompt = "I would like to check my symptoms. Please ask me what they are."
         if p_col4.button("🏥 Clinic branches and fees"):
             quick_prompt = "What are the branch locations, hospital hours and consultation fees?"
 
@@ -355,7 +355,8 @@ if curr_role == "patient":
 
             start_t = time.time()
             try:
-                result = st.session_state.graph.invoke(state_input, config=config)
+                with st.spinner("CeylonCare AI is processing your request..."):
+                    result = st.session_state.graph.invoke(state_input, config=config)
                 latency = round(time.time() - start_t, 2)
 
                 interrupts = result.get("__interrupt__")
