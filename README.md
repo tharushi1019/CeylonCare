@@ -1,5 +1,5 @@
 # CeylonCare Health Network — Intelligent Agentic AI System
-## IT4321 | Final Year Undergraduate Project | Horizon Campus
+## IT43212 - Agentic AI | Assignment 2 - Design and Implementation of an Intelligent Agentic AI System for Patient Services Automation | Horizon Campus
 
 > **A production-grade, multi-agent AI system for automating patient services at a private healthcare network across Colombo, Kandy, and Galle, Sri Lanka.**
 
