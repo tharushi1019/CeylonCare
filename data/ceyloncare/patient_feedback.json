@@ -22,5 +22,13 @@
         "comment": "Excellent assistant! Booked appointment in 30 seconds.",
         "service_category": "Appointment Booking",
         "timestamp": "2026-11-03 13:40:38"
+    },
+    {
+        "feedback_id": "FBK-0004",
+        "patient_id": "P001",
+        "rating": 5,
+        "comment": "Excellent assistant! Booked appointment in 30 seconds.",
+        "service_category": "Appointment Booking",
+        "timestamp": "2026-11-03 14:21:07"
     }
 ]

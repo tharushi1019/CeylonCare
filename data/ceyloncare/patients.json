@@ -276,6 +276,26 @@
             "date": "2026-12-01",
             "time": "02:00 PM",
             "status": "cancelled"
+        },
+        {
+            "appointment_id": "APT-1012",
+            "patient_id": "P001",
+            "doctor": "Dr. K. Perera",
+            "specialist": "Cardiologist",
+            "branch": "Colombo Central Hospital",
+            "date": "2026-12-18",
+            "time": "11:00 AM",
+            "status": "cancelled"
+        },
+        {
+            "appointment_id": "APT-1013",
+            "patient_id": "P002",
+            "doctor": "Dr. T. Abeywardena",
+            "specialist": "Dermatologist",
+            "branch": "Colombo Central Hospital",
+            "date": "2026-12-01",
+            "time": "02:00 PM",
+            "status": "cancelled"
         }
     ],
     "visit_history": [

@@ -1,4 +1,7 @@
-﻿import os
+import os
+from dotenv import load_dotenv
+load_dotenv()
+
 
 from langgraph.graph import StateGraph, START, END
 from langgraph.checkpoint.memory import InMemorySaver
