@@ -204,43 +204,37 @@ print(
 # Add documents only if database is empty
 # ------------------------------------------------------------
 
-if existing_count == 0:
+if existing_count > 0:
+    print(f"       Resetting existing {existing_count} records to update knowledge base...")
+    # Delete old records to allow complete fresh re-indexing
+    existing_ids = collection.get()["ids"]
+    if existing_ids:
+        collection.delete(ids=existing_ids)
 
-    ids = [
-        f"clinic_minilm_section_{index}"
-        for index in range(
-            len(documents)
-        )
-    ]
-
-    collection.add(
-        ids=ids,
-        embeddings=[
-            vector.tolist()
-            for vector in vectors
-        ],
-        documents=texts,
-        metadatas=[
-            document.metadata
-            for document in documents
-        ],
+ids = [
+    f"clinic_minilm_section_{index}"
+    for index in range(
+        len(documents)
     )
+]
 
-    print(
-        f"       Added {len(documents)} "
-        "documents to MiniLM Chroma."
-    )
+collection.add(
+    ids=ids,
+    embeddings=[
+        vector.tolist()
+        for vector in vectors
+    ],
+    documents=texts,
+    metadatas=[
+        document.metadata
+        for document in documents
+    ],
+)
 
-else:
-
-    print(
-        "       MiniLM Chroma already "
-        "contains documents."
-    )
-
-    print(
-        "       Skipping duplicate insertion."
-    )
+print(
+    f"       Added {len(documents)} "
+    "documents to MiniLM Chroma."
+)
 
 
 print(

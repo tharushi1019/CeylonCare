@@ -224,7 +224,8 @@ def knowledge_agent(
 
         answer = (
             answer_from_minilm_knowledge_base(
-                question
+                question,
+                state.get("chat_history", [])
             )
         )
 
@@ -248,9 +249,10 @@ def knowledge_agent(
             "MiniLM RAG failed."
         )
 
-        print(
-            f"[KNOWLEDGE AGENT] Error: {e}"
-        )
+        try:
+            print(f"[KNOWLEDGE AGENT] Error: {e}")
+        except Exception:
+            pass
 
         print(
             "[KNOWLEDGE AGENT] "

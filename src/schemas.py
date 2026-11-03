@@ -37,3 +37,17 @@ class SupervisorDecision(BaseModel):
     reason: str = Field(
         description="Short explanation for the routing decision."
     )
+
+
+class TriageDecision(BaseModel):
+    """
+    Structured triage evaluation produced by the Triage Agent.
+    """
+
+    final_response: str = Field(
+        description="The empathetic response to the patient."
+    )
+
+    human_escalation_required: bool = Field(
+        description="True if the symptoms describe a severe or life-threatening medical emergency."
+    )

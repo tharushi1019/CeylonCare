@@ -7,10 +7,11 @@ class CeylonCareState(TypedDict, total=False):
     """
 
     # ========================================================
-    # User
+    # User & Conversation
     # ========================================================
 
     user_message: str
+    chat_history: list
 
     # ========================================================
     # Patient

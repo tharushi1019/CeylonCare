@@ -20,7 +20,9 @@
             "gender": "Male",
             "city": "Colombo",
             "blood_group": "B+",
-            "chronic_conditions": ["Hypertension"],
+            "chronic_conditions": [
+                "Hypertension"
+            ],
             "emergency_contact": "Sunila Perera (Wife) - 0779876543"
         },
         {
@@ -33,7 +35,10 @@
             "gender": "Female",
             "city": "Kandy",
             "blood_group": "O+",
-            "chronic_conditions": ["Type 2 Diabetes", "Coronary Artery Disease"],
+            "chronic_conditions": [
+                "Type 2 Diabetes",
+                "Coronary Artery Disease"
+            ],
             "emergency_contact": "Rohan Silva (Son) - 0718765432"
         },
         {
@@ -46,7 +51,9 @@
             "gender": "Male",
             "city": "Galle",
             "blood_group": "A+",
-            "chronic_conditions": ["Allergic Asthma"],
+            "chronic_conditions": [
+                "Allergic Asthma"
+            ],
             "emergency_contact": "Dilini Fernando (Sister) - 0757654321"
         },
         {
@@ -54,91 +61,109 @@
             "name": "Anula Jayawardena",
             "email": "anula.j@example.com",
             "password": "password123",
-            "date_of_birth": "1958-08-04",
-            "phone": "0724567890",
+            "date_of_birth": "1958-08-25",
+            "phone": "0764567890",
             "gender": "Female",
             "city": "Colombo",
             "blood_group": "AB+",
-            "chronic_conditions": ["Osteoarthritis", "Hypertension"],
-            "emergency_contact": "Mahesh Jayawardena (Son) - 0729876543"
+            "chronic_conditions": [
+                "Bilateral Knee Osteoarthritis",
+                "Osteoporosis"
+            ],
+            "emergency_contact": "Chandana Jayawardena (Husband) - 0761234567"
         },
         {
             "patient_id": "P005",
             "name": "Dinesh Senanayake",
             "email": "dinesh.s@example.com",
             "password": "password123",
-            "date_of_birth": "1982-01-30",
+            "date_of_birth": "1974-04-18",
             "phone": "0785678901",
             "gender": "Male",
             "city": "Kandy",
-            "blood_group": "B-",
-            "chronic_conditions": ["Migraine"],
-            "emergency_contact": "Champa Senanayake (Wife) - 0781234567"
+            "blood_group": "O-",
+            "chronic_conditions": [
+                "Chronic Kidney Disease Stage 3",
+                "Hypertension"
+            ],
+            "emergency_contact": "Kumari Senanayake (Wife) - 0789876543"
         },
         {
             "patient_id": "P006",
             "name": "Fatima Rizwan",
             "email": "fatima.r@example.com",
             "password": "password123",
-            "date_of_birth": "1994-09-18",
+            "date_of_birth": "1992-09-30",
             "phone": "0776789012",
             "gender": "Female",
             "city": "Colombo",
-            "blood_group": "O-",
-            "chronic_conditions": ["Eczema / Contact Dermatitis"],
-            "emergency_contact": "Rizwan Mohamed (Husband) - 0772345678"
+            "blood_group": "B-",
+            "chronic_conditions": [
+                "Chronic Migraine",
+                "Primary Hypothyroidism"
+            ],
+            "emergency_contact": "Mohamed Rizwan (Brother) - 0771122334"
         },
         {
             "patient_id": "P007",
             "name": "Kavinda Wickramasinghe",
             "email": "kavinda.w@example.com",
             "password": "password123",
-            "date_of_birth": "2001-07-25",
-            "phone": "0767890123",
+            "date_of_birth": "1981-12-05",
+            "phone": "0717890123",
             "gender": "Male",
             "city": "Galle",
             "blood_group": "A-",
-            "chronic_conditions": [],
-            "emergency_contact": "Premasiri Wickramasinghe (Father) - 0763456789"
+            "chronic_conditions": [
+                "Mixed Dyslipidemia",
+                "Non-Alcoholic Fatty Liver"
+            ],
+            "emergency_contact": "Sanduni Wickramasinghe (Wife) - 0715566778"
         },
         {
             "patient_id": "P008",
             "name": "Manel Kumari",
             "email": "manel.k@example.com",
             "password": "password123",
-            "date_of_birth": "1973-12-10",
-            "phone": "0718901234",
+            "date_of_birth": "1968-02-14",
+            "phone": "0728901234",
             "gender": "Female",
             "city": "Kandy",
-            "blood_group": "B+",
-            "chronic_conditions": ["Hypothyroidism", "Dyslipidemia"],
-            "emergency_contact": "Bandula Kumari (Husband) - 0714567890"
+            "blood_group": "O+",
+            "chronic_conditions": [
+                "Seropositive Rheumatoid Arthritis"
+            ],
+            "emergency_contact": "Sarath Bandara (Husband) - 0723344556"
         },
         {
             "patient_id": "P009",
             "name": "Suren De Alwis",
-            "email": "suren.a@example.com",
+            "email": "suren.d@example.com",
             "password": "password123",
-            "date_of_birth": "1988-04-05",
-            "phone": "0759012345",
+            "date_of_birth": "1985-07-22",
+            "phone": "0779012345",
             "gender": "Male",
             "city": "Colombo",
-            "blood_group": "O+",
-            "chronic_conditions": ["Gastritis"],
-            "emergency_contact": "Sanduni De Alwis (Wife) - 0755678901"
+            "blood_group": "AB-",
+            "chronic_conditions": [
+                "Gastroesophageal Reflux Disease (GERD)"
+            ],
+            "emergency_contact": "Priyanthi De Alwis (Sister) - 0778899001"
         },
         {
             "patient_id": "P010",
             "name": "Nadeeka Ratnayake",
             "email": "nadeeka.r@example.com",
             "password": "password123",
-            "date_of_birth": "1961-06-14",
-            "phone": "0701234567",
+            "date_of_birth": "1995-10-10",
+            "phone": "0760123456",
             "gender": "Female",
             "city": "Galle",
-            "blood_group": "AB-",
-            "chronic_conditions": ["Chronic Kidney Disease Stage 2", "Hypertension"],
-            "emergency_contact": "Asanka Ratnayake (Son) - 0709876543"
+            "blood_group": "B+",
+            "chronic_conditions": [
+                "Severe Atopic Dermatitis"
+            ],
+            "emergency_contact": "Kamal Ratnayake (Father) - 0764455667"
         }
     ],
     "appointments": [
@@ -148,18 +173,18 @@
             "doctor": "Dr. K. Perera",
             "specialist": "Cardiologist",
             "branch": "Colombo Central Hospital",
-            "date": "2026-09-21",
-            "time": "10:00 AM",
+            "date": "2026-11-20",
+            "time": "09:00 AM",
             "status": "confirmed"
         },
         {
             "appointment_id": "APT-1002",
             "patient_id": "P002",
-            "doctor": "Dr. U. Senaratne",
+            "doctor": "Dr. S. Fernando",
             "specialist": "Cardiologist",
-            "branch": "Kandy Specialty Center",
-            "date": "2026-09-23",
-            "time": "11:00 AM",
+            "branch": "Colombo Central Hospital",
+            "date": "2026-11-24",
+            "time": "02:00 PM",
             "status": "confirmed"
         },
         {
@@ -168,19 +193,89 @@
             "doctor": "Dr. C. Mendis",
             "specialist": "General Physician",
             "branch": "Galle Coastal Medical Center",
-            "date": "2026-09-22",
-            "time": "09:30 AM",
+            "date": "2026-11-26",
+            "time": "10:00 AM",
             "status": "confirmed"
         },
         {
             "appointment_id": "APT-1004",
+            "patient_id": "P004",
+            "doctor": "Dr. H. Rathnayake",
+            "specialist": "Orthopedic Surgeon",
+            "branch": "Kandy Specialty Center",
+            "date": "2026-11-28",
+            "time": "11:30 AM",
+            "status": "confirmed"
+        },
+        {
+            "appointment_id": "APT-1005",
             "patient_id": "P006",
+            "doctor": "Dr. R. Wickramasinghe",
+            "specialist": "Neurologist",
+            "branch": "Colombo Central Hospital",
+            "date": "2026-11-25",
+            "time": "03:00 PM",
+            "status": "confirmed"
+        },
+        {
+            "appointment_id": "APT-1006",
+            "patient_id": "P001",
+            "doctor": "Dr. K. Perera",
+            "specialist": "Cardiologist",
+            "branch": "Colombo Central Hospital",
+            "date": "2026-12-18",
+            "time": "11:00 AM",
+            "status": "cancelled"
+        },
+        {
+            "appointment_id": "APT-1007",
+            "patient_id": "P002",
             "doctor": "Dr. T. Abeywardena",
             "specialist": "Dermatologist",
             "branch": "Colombo Central Hospital",
-            "date": "2026-09-24",
+            "date": "2026-12-01",
             "time": "02:00 PM",
-            "status": "confirmed"
+            "status": "cancelled"
+        },
+        {
+            "appointment_id": "APT-1008",
+            "patient_id": "P001",
+            "doctor": "Dr. K. Perera",
+            "specialist": "Cardiologist",
+            "branch": "Colombo Central Hospital",
+            "date": "2026-12-18",
+            "time": "11:00 AM",
+            "status": "cancelled"
+        },
+        {
+            "appointment_id": "APT-1009",
+            "patient_id": "P002",
+            "doctor": "Dr. T. Abeywardena",
+            "specialist": "Dermatologist",
+            "branch": "Colombo Central Hospital",
+            "date": "2026-12-01",
+            "time": "02:00 PM",
+            "status": "cancelled"
+        },
+        {
+            "appointment_id": "APT-1010",
+            "patient_id": "P001",
+            "doctor": "Dr. K. Perera",
+            "specialist": "Cardiologist",
+            "branch": "Colombo Central Hospital",
+            "date": "2026-12-18",
+            "time": "11:00 AM",
+            "status": "cancelled"
+        },
+        {
+            "appointment_id": "APT-1011",
+            "patient_id": "P002",
+            "doctor": "Dr. T. Abeywardena",
+            "specialist": "Dermatologist",
+            "branch": "Colombo Central Hospital",
+            "date": "2026-12-01",
+            "time": "02:00 PM",
+            "status": "cancelled"
         }
     ],
     "visit_history": [
@@ -191,9 +286,18 @@
             "department": "Cardiology",
             "doctor": "Dr. K. Perera",
             "branch": "Colombo Central Hospital",
+            "icd11_code": "BA00 (Essential Hypertension)",
             "reason": "Routine hypertension check and ECG evaluation.",
-            "summary": "Blood pressure recorded at 135/85 mmHg. Normal sinus rhythm on resting ECG. Maintained current ACE-inhibitor dosage.",
-            "outcome": "Scheduled 6-week follow-up. Lifestyle salt restriction reinforced."
+            "vitals": {
+                "blood_pressure": "135/85 mmHg",
+                "heart_rate": "74 bpm",
+                "temperature": "36.6 C",
+                "spo2": "98%",
+                "bmi": 24.2
+            },
+            "investigations": "Normal sinus rhythm on resting 12-lead ECG. Serum potassium 4.2 mmol/L. Serum creatinine 0.9 mg/dL.",
+            "summary": "Blood pressure reasonably controlled on current ACE-inhibitor regimen. No peripheral edema or murmurs detected.",
+            "outcome": "Maintained Lisinopril 10mg daily. Scheduled 3-month routine blood pressure and renal panel review."
         },
         {
             "visit_id": "VIS-002",
@@ -202,9 +306,18 @@
             "department": "Endocrinology & Cardiology",
             "doctor": "Dr. U. Senaratne",
             "branch": "Kandy Specialty Center",
-            "reason": "Post-admission cardiac evaluation & HbA1c review.",
-            "summary": "HbA1c was 7.4%. Patient reported mild exertion dyspnea. Echocardiogram shows preserved LVEF 58%. Adjusted Metformin and Beta-blocker.",
-            "outcome": "Advised cardiac rehabilitation exercise plan and routine lipid panel."
+            "icd11_code": "5A11 (Type 2 Diabetes Mellitus) & BA80 (Coronary Artery Disease)",
+            "reason": "Post-admission cardiac evaluation & HbA1c diabetic review.",
+            "vitals": {
+                "blood_pressure": "142/88 mmHg",
+                "heart_rate": "82 bpm",
+                "temperature": "36.8 C",
+                "spo2": "97%",
+                "bmi": 28.4
+            },
+            "investigations": "HbA1c recorded at 7.4%. Echocardiogram shows preserved LVEF 58% with mild diastolic dysfunction. Fasting blood sugar 138 mg/dL.",
+            "summary": "Patient reports mild exertional dyspnea on stair climbing. Glycemic control sub-optimal.",
+            "outcome": "Uptitrated Metformin to 850mg BD, maintained Atorvastatin 20mg nocte and Bisoprolol 2.5mg. Enrolled in cardiac rehabilitation exercise program."
         },
         {
             "visit_id": "VIS-003",
@@ -213,20 +326,158 @@
             "department": "Pulmonology / OPD",
             "doctor": "Dr. C. Mendis",
             "branch": "Galle Coastal Medical Center",
-            "reason": "Asthma exacerbation during monsoon season.",
-            "summary": "Wheezing on bilateral lung fields. Peak expiratory flow improved after Salbutamol nebulization. Prescribed inhaled corticosteroid.",
-            "outcome": "Discharged home with Asthma Action Plan."
+            "icd11_code": "CA23 (Asthma)",
+            "reason": "Acute asthma exacerbation triggered by coastal monsoon dampness.",
+            "vitals": {
+                "blood_pressure": "120/78 mmHg",
+                "heart_rate": "96 bpm",
+                "temperature": "37.0 C",
+                "spo2": "95%",
+                "bmi": 22.1
+            },
+            "investigations": "Peak Expiratory Flow (PEF) was 290 L/min (62% predicted). Improved to 395 L/min post-nebulization. Chest radiograph clear.",
+            "summary": "Bilateral expiratory wheezing resolved promptly after Salbutamol nebulization. No signs of secondary bacterial respiratory infection.",
+            "outcome": "Initiated Budesonide/Formoterol (160/4.5mcg) turbohaler 1 puff BD. Provided customized written Asthma Action Plan."
         },
         {
             "visit_id": "VIS-004",
             "patient_id": "P004",
             "date": "2026-08-02",
-            "department": "Orthopedics",
+            "department": "Orthopedics & Rheumatology",
             "doctor": "Dr. H. Rathnayake",
             "branch": "Kandy Specialty Center",
-            "reason": "Bilateral knee pain and joint stiffness.",
-            "summary": "Mild crepitus in both knees, joint space narrowing on bilateral standing X-rays. Administered intra-articular gel injection in right knee.",
-            "outcome": "Physiotherapy regimen initiated. Review in 3 months."
+            "icd11_code": "FA00 (Osteoarthritis of Knee)",
+            "reason": "Bilateral knee joint pain, stiffness, and reduced walking tolerance.",
+            "vitals": {
+                "blood_pressure": "138/82 mmHg",
+                "heart_rate": "76 bpm",
+                "temperature": "36.5 C",
+                "spo2": "99%",
+                "bmi": 26.5
+            },
+            "investigations": "Bilateral weight-bearing knee X-rays showed Kellgren-Lawrence Grade 2 medial compartment joint space narrowing with small osteophytes.",
+            "summary": "Crepitus noted on flexion. No acute joint effusion or inflammatory signs.",
+            "outcome": "Administered single intra-articular high molecular weight hyaluronic acid injection in right knee. Prescribed Paracetamol 1g TDS PRN and referred to Physiotherapy Department."
+        },
+        {
+            "visit_id": "VIS-005",
+            "patient_id": "P005",
+            "date": "2026-08-18",
+            "department": "Nephrology & General Medicine",
+            "doctor": "Dr. A. Silva",
+            "branch": "Kandy Specialty Center",
+            "icd11_code": "GB61 (Chronic Kidney Disease Stage 3a)",
+            "reason": "Routine renal function surveillance and blood pressure optimization.",
+            "vitals": {
+                "blood_pressure": "146/92 mmHg",
+                "heart_rate": "78 bpm",
+                "temperature": "36.7 C",
+                "spo2": "98%",
+                "bmi": 25.8
+            },
+            "investigations": "Serum Creatinine: 1.48 mg/dL (eGFR 52 mL/min/1.73m2). Urine Albumin-to-Creatinine Ratio (uACR): 120 mg/g. Serum Potassium: 4.6 mmol/L.",
+            "summary": "Stage 3a CKD stable without acute decline. Blood pressure remains moderately elevated above target (target < 130/80 mmHg).",
+            "outcome": "Increased Losartan from 50mg to 75mg daily. Renal dietitian dietary sodium (<2g/day) and low-protein counseling provided."
+        },
+        {
+            "visit_id": "VIS-006",
+            "patient_id": "P006",
+            "date": "2026-07-29",
+            "department": "Neurology",
+            "doctor": "Dr. R. Wickramasinghe",
+            "branch": "Colombo Central Hospital",
+            "icd11_code": "8A80.0 (Migraine without Aura)",
+            "reason": "Severe throbbing unilateral hemicranial headache with photophobia.",
+            "vitals": {
+                "blood_pressure": "118/74 mmHg",
+                "heart_rate": "70 bpm",
+                "temperature": "36.4 C",
+                "spo2": "100%",
+                "bmi": 21.6
+            },
+            "investigations": "Contrast-enhanced brain MRI showed normal cerebral parenchyma and patent intracranial vasculature. Serum TSH: 3.4 mIU/L (euthyroid on thyroxine).",
+            "summary": "Frequency of episodes currently 4 days per month. Strong association with sleep irregularity and screen glare.",
+            "outcome": "Prescribed Sumatriptan 50mg for acute abortive therapy. Propranolol 40mg daily started for migraine prophylaxis."
+        },
+        {
+            "visit_id": "VIS-007",
+            "patient_id": "P007",
+            "date": "2026-08-22",
+            "department": "General Medicine & Gastroenterology",
+            "doctor": "Dr. N. Jayasinghe",
+            "branch": "Galle Coastal Medical Center",
+            "icd11_code": "5C80 (Hypercholesterolaemia) & DB92 (Hepatic Steatosis)",
+            "reason": "Annual executive health screening follow-up.",
+            "vitals": {
+                "blood_pressure": "130/84 mmHg",
+                "heart_rate": "75 bpm",
+                "temperature": "36.6 C",
+                "spo2": "99%",
+                "bmi": 27.8
+            },
+            "investigations": "Total Cholesterol: 242 mg/dL, LDL: 162 mg/dL, Triglycerides: 205 mg/dL. ALT: 54 U/L, AST: 42 U/L. Abdominal ultrasound revealed Grade 1 fatty liver.",
+            "summary": "Atherogenic dyslipidemia with early metabolic hepatic steatosis. Normal fasting glucose (94 mg/dL).",
+            "outcome": "Started Atorvastatin 20mg nocte. Advised 45-minute daily brisk walking and Mediterranean-style dietary plan. Repeat lipid and liver profile in 12 weeks."
+        },
+        {
+            "visit_id": "VIS-008",
+            "patient_id": "P008",
+            "date": "2026-06-14",
+            "department": "Rheumatology",
+            "doctor": "Dr. T. Abeywardena",
+            "branch": "Kandy Specialty Center",
+            "icd11_code": "FA20.0 (Seropositive Rheumatoid Arthritis)",
+            "reason": "Symmetrical morning stiffness in MCP and PIP joints lasting > 1 hour.",
+            "vitals": {
+                "blood_pressure": "128/80 mmHg",
+                "heart_rate": "80 bpm",
+                "temperature": "36.9 C",
+                "spo2": "98%",
+                "bmi": 24.0
+            },
+            "investigations": "Anti-CCP antibodies strongly positive (>200 U/mL), RF: 64 IU/mL. ESR: 42 mm/hr, CRP: 18 mg/L. Hand radiographs show soft tissue swelling without erosions.",
+            "summary": "Active inflammatory synovitis across bilateral wrists and proximal finger joints.",
+            "outcome": "Initiated Methotrexate 15mg once weekly with Folic Acid 5mg. Short-term bridging Prednisolone 7.5mg daily for 4 weeks. Review in 6 weeks with FBC and liver enzymes."
+        },
+        {
+            "visit_id": "VIS-009",
+            "patient_id": "P009",
+            "date": "2026-07-05",
+            "department": "Gastroenterology & General Surgery",
+            "doctor": "Dr. C. Ratnayake",
+            "branch": "Colombo Central Hospital",
+            "icd11_code": "DA22 (Gastro-oesophageal Reflux Disease)",
+            "reason": "Retro-sternal burning sensation (heartburn) and acid regurgitation, worse nocturnally.",
+            "vitals": {
+                "blood_pressure": "122/78 mmHg",
+                "heart_rate": "72 bpm",
+                "temperature": "36.6 C",
+                "spo2": "99%",
+                "bmi": 26.1
+            },
+            "investigations": "Upper gastrointestinal endoscopy revealed Los Angeles Grade B reflux esophagitis with mucosal breaks. Rapid urease test negative for H. pylori.",
+            "summary": "Erosive GERD without hiatus hernia or Barrett's esophagus.",
+            "outcome": "Prescribed Esomeprazole 40mg once daily 30 minutes before breakfast for 8 weeks. Advised head-of-bed elevation and avoidance of late-night meals."
+        },
+        {
+            "visit_id": "VIS-010",
+            "patient_id": "P010",
+            "date": "2026-08-11",
+            "department": "Dermatology",
+            "doctor": "Dr. T. Abeywardena",
+            "branch": "Galle Coastal Medical Center",
+            "icd11_code": "EA80 (Atopic Eczema)",
+            "reason": "Severe pruritic, erythematous excoriated patches on antecubital and popliteal fossae.",
+            "vitals": {
+                "blood_pressure": "114/72 mmHg",
+                "heart_rate": "68 bpm",
+                "temperature": "36.5 C",
+                "spo2": "100%",
+                "bmi": 20.8
+            },
+            "investigations": "Skin scrapings negative for dermatophytes. Total serum IgE elevated at 480 IU/mL.",
+            "summary": "Moderate-to-severe flexural atopic eczema flare. Secondary bacterial infection absent.",
+            "outcome": "Prescribed Mometasone furoate 0.1% ointment for active patches BD for 7 days. Intensive liquid paraffin emollient moisturization 4 times daily. Oral Cetirizine 10mg nocte."
         }
     ]
 }

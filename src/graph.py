@@ -1,3 +1,5 @@
+﻿import os
+
 from langgraph.graph import StateGraph, START, END
 from langgraph.checkpoint.memory import InMemorySaver
 
@@ -9,6 +11,14 @@ from .agents.appointment_agent import appointment_agent
 from .agents.triage_agent import triage_agent
 from .agents.visit_history_agent import visit_history_agent
 from .agents.human_escalation_agent import human_escalation_agent
+
+# ============================================================
+# LangSmith Observability (enabled when LANGCHAIN_API_KEY is set)
+# ============================================================
+if os.getenv("LANGCHAIN_API_KEY") and os.getenv("LANGCHAIN_TRACING_V2", "").lower() == "true":
+    os.environ.setdefault("LANGCHAIN_PROJECT", "CeylonCare-IT4321")
+    print("[OBSERVABILITY] LangSmith tracing ENABLED")
+
 
 
 # ============================================================
@@ -307,7 +317,7 @@ def build_graph():
     )
 
     # ========================================================
-    # START → Entry Router
+    # START â†’ Entry Router
     # ========================================================
 
     builder.add_conditional_edges(
@@ -320,7 +330,7 @@ def build_graph():
     )
 
     # ========================================================
-    # Supervisor → Specialist Agent
+    # Supervisor â†’ Specialist Agent
     # ========================================================
 
     builder.add_conditional_edges(
@@ -336,7 +346,7 @@ def build_graph():
     )
 
     # ========================================================
-    # Knowledge Agent → END
+    # Knowledge Agent â†’ END
     # ========================================================
 
     builder.add_edge(
@@ -345,7 +355,7 @@ def build_graph():
     )
 
     # ========================================================
-    # Appointment Agent → END
+    # Appointment Agent â†’ END
     # ========================================================
 
     builder.add_edge(
@@ -354,7 +364,7 @@ def build_graph():
     )
 
     # ========================================================
-    # Visit History Agent → END
+    # Visit History Agent â†’ END
     # ========================================================
 
     builder.add_edge(
@@ -363,7 +373,7 @@ def build_graph():
     )
 
     # ========================================================
-    # Triage Agent → Human Escalation / END
+    # Triage Agent â†’ Human Escalation / END
     # ========================================================
 
     builder.add_conditional_edges(
@@ -379,7 +389,7 @@ def build_graph():
     )
 
     # ========================================================
-    # Human Escalation Agent → END
+    # Human Escalation Agent â†’ END
     # ========================================================
 
     builder.add_edge(
@@ -388,7 +398,7 @@ def build_graph():
     )
 
     # ========================================================
-    # Unknown → END
+    # Unknown â†’ END
     # ========================================================
 
     builder.add_edge(

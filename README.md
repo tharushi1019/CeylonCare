@@ -113,7 +113,12 @@ cp .env.example .env
 python build_knowledge_base_minilm.py
 ```
 
-### 6. Launch the Streamlit app
+### 6. Run the Automated Test Suite (27 Unit & Integration Tests)
+```bash
+pytest tests
+```
+
+### 7. Launch the Streamlit app
 ```bash
 streamlit run streamlit_app.py
 ```
@@ -177,11 +182,13 @@ CeylonCare/
 ├── requirements.txt              # Production dependencies
 ├── .env.example                  # Environment variable template
 ├── build_knowledge_base_minilm.py  # RAG index builder
+├── CeylonCare_Agentic_AI_System_Technical_Report.pdf  # 10-page Technical Report
 │
 ├── src/
 │   ├── graph.py                  # LangGraph StateGraph orchestration
 │   ├── supervisor.py             # Supervisor Agent (Gemini + structured output)
 │   ├── state.py                  # CeylonCareState TypedDict
+│   ├── schemas.py                # Pydantic schemas (SupervisorDecision, TriageDecision)
 │   ├── agents/
 │   │   ├── appointment_agent.py  # Multi-turn booking, cancel, reschedule
 │   │   ├── knowledge_agent.py    # RAG knowledge Q&A + WHO ICD-11
@@ -189,20 +196,33 @@ CeylonCare/
 │   │   ├── visit_history_agent.py
 │   │   └── human_escalation_agent.py  # LangGraph interrupt() HITL
 │   ├── analytics/
-│   │   ├── risk_predictor.py     # Task C: Random Forest ML model
-│   │   ├── sentiment_analyzer.py # Task C: NLP priority detection
-│   │   └── vision_triage.py      # Task C: Gemini Vision + heuristics
+│   │   ├── risk_predictor.py     # Task C: Random Forest ML model (94.6% accuracy)
+│   │   ├── sentiment_analyzer.py # Task C: NLP priority & frustration detection
+│   │   └── vision_triage.py      # Task C: Multimodal Vision + clinical heuristics
 │   ├── rag/
-│   │   └── minilm_knowledge_agent.py  # MiniLM + ChromaDB RAG pipeline
+│   │   ├── minilm_knowledge_agent.py      # MiniLM + ChromaDB RAG pipeline
+│   │   └── minilm_knowledge_retriever.py  # Dense vector search retriever
 │   ├── services/
-│   │   └── patient_service.py    # EHR + auth + doctor directory service
+│   │   └── patient_service.py    # EHR, appointment CRUD, conflict detection, feedback
 │   └── tools/
-│       └── patient_tools.py      # LangChain @tool function calling
+│       ├── patient_tools.py      # LangChain @tool function calling
+│       └── icd11_tool.py         # Official WHO ICD-11 OAuth2 live tool
+│
+├── tests/                        # 27 Consolidated Automated Tests
+│   ├── test_services.py          # EHR, auth, slot conflict, feedback tests
+│   ├── test_tools.py             # LangChain tool calling tests
+│   ├── test_analytics.py         # ML risk accuracy (≥90%), NLP, vision tests
+│   └── test_graph.py             # LangGraph routing, checkpointer, HITL tests
+│
+├── scripts/
+│   └── generate_report.py        # ReportLab 10-page academic report compiler
 │
 ├── data/
 │   └── ceyloncare/
-│       ├── patients.json          # 10 patient profiles + appointments + visits
-│       └── doctors_directory.json # 13 doctors across 3 branches
+│       ├── patients.json          # 10 patient profiles + longitudinal EHR visits
+│       ├── doctors_directory.json # 13 doctors across 3 hospital branches
+│       ├── clinical_risk_dataset.csv # 2,500 calibrated patient records for ML
+│       └── patient_feedback.json  # Recorded patient satisfaction feedback
 │
 └── knowledge/
     └── clinic_information.txt    # CeylonCare knowledge base (RAG source)

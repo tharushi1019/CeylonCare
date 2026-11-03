@@ -21,7 +21,7 @@ class ResilientLLM:
         if self.gemini_key:
             try:
                 self.primary_llm = ChatGoogleGenerativeAI(
-                    model="gemini-flash-latest",
+                    model="gemini-1.5-flash",
                     google_api_key=self.gemini_key,
                     temperature=temperature,
                 )
@@ -31,7 +31,7 @@ class ResilientLLM:
         if self.groq_key:
             try:
                 self.secondary_llm = ChatGroq(
-                    model="openai/gpt-oss-20b",
+                    model="llama-3.3-70b-versatile",
                     groq_api_key=self.groq_key,
                     temperature=temperature,
                 )
@@ -74,6 +74,31 @@ class ResilientLLM:
             )
             
         raise RuntimeError("Could not bind structured output schema to any LLM backend.")
+
+    def bind_tools(self, tools, **kwargs):
+        primary_bound = self.primary_llm.bind_tools(tools, **kwargs) if self.primary_llm else None
+        secondary_bound = self.secondary_llm.bind_tools(tools, **kwargs) if self.secondary_llm else None
+        return ResilientBoundToolsLLM(primary_bound, secondary_bound)
+
+class ResilientBoundToolsLLM:
+    def __init__(self, primary_bound, secondary_bound):
+        self.primary_bound = primary_bound
+        self.secondary_bound = secondary_bound
+
+    def invoke(self, input_prompt, **kwargs):
+        if self.primary_bound:
+            try:
+                return self.primary_bound.invoke(input_prompt, **kwargs)
+            except Exception as e:
+                print(f"[LLM FACTORY] Primary tool-bound LLM failed ({e}). Falling back...")
+
+        if self.secondary_bound:
+            try:
+                return self.secondary_bound.invoke(input_prompt, **kwargs)
+            except Exception as e:
+                print(f"[LLM FACTORY] Secondary tool-bound LLM failed ({e}).")
+
+        raise RuntimeError("All LLM tool-bound backends failed.")
 
 class ResilientStructuredLLM:
     def __init__(self, primary_bound, secondary_bound, schema_cls):

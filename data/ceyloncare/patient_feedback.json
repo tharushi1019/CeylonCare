@@ -1,0 +1,26 @@
+[
+    {
+        "feedback_id": "FBK-0001",
+        "patient_id": "P001",
+        "rating": 5,
+        "comment": "Excellent assistant! Booked appointment in 30 seconds.",
+        "service_category": "Appointment Booking",
+        "timestamp": "2026-11-03 13:26:46"
+    },
+    {
+        "feedback_id": "FBK-0002",
+        "patient_id": "P001",
+        "rating": 5,
+        "comment": "Excellent assistant! Booked appointment in 30 seconds.",
+        "service_category": "Appointment Booking",
+        "timestamp": "2026-11-03 13:30:53"
+    },
+    {
+        "feedback_id": "FBK-0003",
+        "patient_id": "P001",
+        "rating": 5,
+        "comment": "Excellent assistant! Booked appointment in 30 seconds.",
+        "service_category": "Appointment Booking",
+        "timestamp": "2026-11-03 13:40:38"
+    }
+]

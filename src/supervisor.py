@@ -7,15 +7,18 @@ from .state import CeylonCareState
 
 load_dotenv()
 
-# Initialize primary model with fallback support (Gemini primary, Groq fallback)
-model = get_llm(temperature=0)
+_structured_model = None
 
-# Structured supervisor decision wrapper
-try:
-    structured_model = model.with_structured_output(SupervisorDecision)
-except Exception as e:
-    print(f"[SUPERVISOR] Structured model binding warning: {e}")
-    structured_model = model
+def _get_structured_model():
+    global _structured_model
+    if _structured_model is None:
+        model = get_llm(temperature=0)
+        try:
+            _structured_model = model.with_structured_output(SupervisorDecision)
+        except Exception as e:
+            print(f"[SUPERVISOR] Structured model binding warning: {e}")
+            _structured_model = model
+    return _structured_model
 
 # ============================================================
 # Supervisor Prompt
@@ -86,7 +89,7 @@ User request:
 {user_message}
 """
 
-    # Ask Groq for the structured decision
+    structured_model = _get_structured_model()
     decision = structured_model.invoke(prompt)
 
     print("\n[SUPERVISOR NODE]")

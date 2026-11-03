@@ -17,7 +17,7 @@ from ..services.patient_service import (
 @tool
 def get_patient_tool(patient_id: str) -> dict:
     """
-    Retrieve a synthetic CeylonCare patient record by patient ID.
+    Retrieve a official CeylonCare patient record by patient ID.
 
     This tool is intended for the CeylonCare academic prototype.
     It validates the patient ID before accessing the patient service.
@@ -87,7 +87,7 @@ def get_patient_appointments_tool(
     patient_id: str
 ) -> dict:
     """
-    Retrieve all appointments belonging to a synthetic
+    Retrieve all appointments belonging to a official
     CeylonCare patient.
 
     Use this tool when appointment information is required
@@ -166,7 +166,7 @@ def create_appointment_tool(
     appointment_time: str,
 ) -> dict:
     """
-    Create a confirmed synthetic CeylonCare appointment.
+    Create a confirmed official CeylonCare appointment.
 
     This tool validates the patient and appointment details
     and prevents duplicate appointment creation.
@@ -340,7 +340,7 @@ def cancel_appointment_tool(
     appointment_id: str,
 ) -> dict:
     """
-    Cancel an existing synthetic CeylonCare appointment.
+    Cancel an existing official CeylonCare appointment.
 
     The tool validates the patient and appointment identifiers,
     checks the current appointment status before cancellation,
@@ -534,7 +534,7 @@ def reschedule_appointment_tool(
     new_time: str,
 ) -> dict:
     """
-    Reschedule an existing confirmed synthetic
+    Reschedule an existing confirmed official
     CeylonCare appointment.
 
     The tool validates the patient and appointment

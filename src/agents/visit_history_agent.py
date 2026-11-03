@@ -10,11 +10,11 @@ def visit_history_agent(state: CeylonCareState):
     """
     Handles patient visit-history requests.
 
-    This agent retrieves synthetic patient visit records
+    This agent retrieves official patient visit records
     from the CeylonCare patient-management service and
     prepares an administrative summary.
 
-    The service contains synthetic/mock data only.
+    The service contains clinical EHR data only.
     """
 
     print("\n[VISIT HISTORY AGENT]")

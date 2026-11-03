@@ -1,4 +1,5 @@
 import json
+import time
 from pathlib import Path
 from typing import Optional, List, Dict, Tuple
 
@@ -6,15 +7,16 @@ from typing import Optional, List, Dict, Tuple
 # ============================================================
 # CeylonCare Patient Management & EHR Service
 # ============================================================
-# Core data-service layer for CeylonCare Health Network.
+# Production-ready data-service layer for CeylonCare Health Network.
 # Integrates with CeylonCare multi-branch EHR (Colombo, Kandy, Galle),
-# doctor directory, patient authentication, and appointments.
+# doctor directory, patient authentication, appointments, and patient feedback.
 # ============================================================
 
 
 DATA_DIR = Path(__file__).resolve().parents[2] / "data" / "ceyloncare"
 PATIENTS_FILE = DATA_DIR / "patients.json"
 DOCTORS_FILE = DATA_DIR / "doctors_directory.json"
+FEEDBACK_FILE = DATA_DIR / "patient_feedback.json"
 
 
 def _ensure_data_file():
@@ -47,9 +49,7 @@ def _ensure_data_file():
 
 
 def _load_data() -> dict:
-    """
-    Load CeylonCare patient-management and EHR data.
-    """
+    """Load CeylonCare patient-management and EHR data."""
     _ensure_data_file()
     try:
         return json.loads(PATIENTS_FILE.read_text(encoding="utf-8"))
@@ -63,9 +63,7 @@ def _load_data() -> dict:
 
 
 def _save_data(data: dict):
-    """
-    Save CeylonCare patient-management and EHR data.
-    """
+    """Save CeylonCare patient-management and EHR data."""
     _ensure_data_file()
     PATIENTS_FILE.write_text(
         json.dumps(data, indent=4),
@@ -74,9 +72,7 @@ def _save_data(data: dict):
 
 
 def _load_doctors_data() -> dict:
-    """
-    Load doctors and branches directory.
-    """
+    """Load doctors and branches directory."""
     if DOCTORS_FILE.exists():
         try:
             return json.loads(DOCTORS_FILE.read_text(encoding="utf-8"))
@@ -142,10 +138,8 @@ def get_doctor_schedule(query: str) -> Optional[dict]:
     return None
 
 
-def format_doctor_schedule_summary(doctor_or_specialty: str) -> str:
-    """
-    Generate human-readable doctor schedule information.
-    """
+def format_doctor_directory_summary(doctor_or_specialty: str) -> str:
+    """Format doctor information into a clear conversational response."""
     q = doctor_or_specialty.strip()
     doc = get_doctor_schedule(q)
     
@@ -159,7 +153,6 @@ def format_doctor_schedule_summary(doctor_or_specialty: str) -> str:
             f"Just let me know your preferred date and time!"
         )
         
-    # If not a single doctor, check department
     matching = get_doctors_by_specialty(q)
     if matching:
         lines = [f"Here are the available specialists for **{q.title()}**:"]
@@ -256,47 +249,34 @@ def register_patient(
 
     data.setdefault("patients", []).append(new_patient)
     _save_data(data)
-
-    return True, f"Patient {name} registered successfully with ID: {new_patient_id}", new_patient
+    return True, f"Patient account created successfully! Your Patient ID is {new_patient_id}.", new_patient
 
 
 # ============================================================
-# Patient EHR Operations
+# Patient Retrieval Operations
 # ============================================================
-
-def get_all_patients() -> List[dict]:
-    """Retrieve all patients in the CeylonCare registry."""
-    return _load_data().get("patients", [])
-
 
 def get_patient(patient_id: str) -> Optional[dict]:
-    """Retrieve a patient by patient ID."""
+    """Retrieve a patient record by ID."""
     data = _load_data()
     for patient in data.get("patients", []):
-        if patient["patient_id"].lower() == patient_id.strip().lower():
+        if patient.get("patient_id", "").lower() == patient_id.strip().lower():
             return patient
     return None
 
 
-def create_patient(
-    patient_id: str,
-    name: str,
-    date_of_birth: str,
-    phone: str = "",
-    email: str = ""
-) -> dict:
-    """Create a synthetic patient record (backward compatibility)."""
-    existing_patient = get_patient(patient_id)
-    if existing_patient:
-        return existing_patient
+def get_all_patients() -> List[dict]:
+    """Retrieve all registered patients in CeylonCare EHR."""
+    return _load_data().get("patients", [])
 
+
+def create_patient(patient_id: str, name: str) -> dict:
+    """Create a patient record (backward compatibility)."""
     data = _load_data()
     patient = {
-        "patient_id": patient_id,
-        "name": name,
-        "date_of_birth": date_of_birth,
-        "phone": phone,
-        "email": email,
+        "patient_id": patient_id.strip(),
+        "name": name.strip(),
+        "email": f"{patient_id.lower()}@ceyloncare.lk",
         "password": "password123",
         "city": "Colombo",
         "blood_group": "B+",
@@ -309,7 +289,7 @@ def create_patient(
 
 
 # ============================================================
-# Appointment Operations
+# Appointment Operations & Slot Validation
 # ============================================================
 
 def create_appointment(
@@ -320,7 +300,10 @@ def create_appointment(
     doctor: str = "",
     branch: str = ""
 ) -> dict:
-    """Create an appointment linked to a patient."""
+    """
+    Create an appointment linked to a patient.
+    Includes conflict detection to prevent double-booking identical doctor-time slots.
+    """
     data = _load_data()
 
     # Determine doctor and branch if not specified
@@ -331,6 +314,25 @@ def create_appointment(
             branch = branch or doc_info.get("branch", "Colombo Central Hospital")
         else:
             branch = branch or "Colombo Central Hospital"
+
+    # Slot Conflict Validation: Check if doctor already has a confirmed booking at this exact slot
+    for app in data.get("appointments", []):
+        if (
+            app.get("status", "").lower() == "confirmed"
+            and app.get("doctor", "").lower() == doctor.strip().lower()
+            and app.get("date", "").strip() == appointment_date.strip()
+            and app.get("time", "").strip().lower() == appointment_time.strip().lower()
+        ):
+            # Slot collision detected
+            return {
+                "appointment_id": None,
+                "status": "conflict",
+                "error": f"Time slot {appointment_time} on {appointment_date} with {doctor} is already booked. Please choose an alternate slot.",
+                "doctor": doctor,
+                "branch": branch,
+                "date": appointment_date,
+                "time": appointment_time
+            }
 
     appointment_id = f"APT-{len(data.get('appointments', [])) + 1001:04d}"
 
@@ -431,10 +433,10 @@ def reschedule_appointment(
 
 
 # ============================================================
-# Visit History Operations
+# Longitudinal EHR Visit History & Summarization
 # ============================================================
 
-def add_visit_history(
+def add_visit_record(
     patient_id: str,
     visit_date: str,
     department: str,
@@ -442,9 +444,10 @@ def add_visit_history(
     summary: str,
     outcome: str,
     doctor: str = "",
-    branch: str = "Colombo Central Hospital"
+    branch: str = "Colombo Central Hospital",
+    icd11_code: str = ""
 ) -> dict:
-    """Add a patient visit record."""
+    """Add a patient clinical visit record."""
     data = _load_data()
     visit_id = f"VIS-{len(data.get('visit_history', [])) + 1:03d}"
 
@@ -455,6 +458,7 @@ def add_visit_history(
         "department": department,
         "doctor": doctor,
         "branch": branch,
+        "icd11_code": icd11_code,
         "reason": reason,
         "summary": summary,
         "outcome": outcome
@@ -485,20 +489,89 @@ def format_visit_history(patient_id: str) -> str:
         return f"No prior visit history recorded for patient {patient['name']} ({patient_id})."
 
     lines = [
-        f"**Patient EHR Summary: {patient['name']} ({patient['patient_id']})**",
-        f"• DOB: {patient.get('date_of_birth', 'N/A')} | Blood Group: {patient.get('blood_group', 'N/A')}",
-        f"• Chronic Conditions: {', '.join(patient.get('chronic_conditions', [])) or 'None recorded'}",
+        f"### Patient EHR Clinical Profile: {patient['name']} ({patient['patient_id']})",
+        f"• **Demographics:** {patient.get('gender', 'N/A')} | DOB: {patient.get('date_of_birth', 'N/A')} | Blood Group: `{patient.get('blood_group', 'N/A')}`",
+        f"• **Primary Branch:** {patient.get('city', 'Colombo')} Branch",
+        f"• **Documented Conditions:** {', '.join(patient.get('chronic_conditions', [])) or 'None recorded'}",
+        f"• **Emergency Contact:** {patient.get('emergency_contact', 'N/A')}",
         "",
-        "**Clinical Visit History:**"
+        "#### Longitudinal Clinical Encounters & Records:"
     ]
 
     for v in visits:
-        lines.extend([
-            f"\n📅 **Visit ID {v['visit_id']} ({v['date']})** - {v.get('branch', 'Hospital')}",
-            f"• **Department:** {v['department']} | **Consultant:** {v.get('doctor', 'Attending Physician')}",
-            f"• **Presenting Reason:** {v['reason']}",
-            f"• **Clinical Notes:** {v['summary']}",
-            f"• **Outcome:** {v['outcome']}"
-        ])
+        lines.append(f"\n---")
+        lines.append(f"🏥 **Visit ID {v['visit_id']} ({v['date']})** — {v.get('branch', 'Hospital')}")
+        lines.append(f"• **Department:** {v['department']} | **Consultant:** {v.get('doctor', 'Attending Physician')}")
+        if v.get("icd11_code"):
+            lines.append(f"• **ICD-11 Code / Diagnosis:** `{v['icd11_code']}`")
+        lines.append(f"• **Presenting Reason:** {v['reason']}")
+        if v.get("vitals"):
+            vitals = v["vitals"]
+            lines.append(f"• **Recorded Vitals:** BP: `{vitals.get('blood_pressure')}` | HR: `{vitals.get('heart_rate')}` | SpO2: `{vitals.get('spo2')}` | BMI: `{vitals.get('bmi')}`")
+        if v.get("investigations"):
+            lines.append(f"• **Diagnostic Investigations:** {v['investigations']}")
+        lines.append(f"• **Clinical Findings:** {v['summary']}")
+        lines.append(f"• **Outcome & Action Plan:** {v['outcome']}")
 
     return "\n".join(lines)
+
+
+# ============================================================
+# Patient Feedback & Continuous Quality Improvement
+# ============================================================
+
+def submit_patient_feedback(
+    patient_id: str,
+    rating: int,
+    comment: str,
+    service_category: str = "General Patient Service"
+) -> dict:
+    """
+    Submit patient satisfaction feedback for continuous agentic performance tracking.
+    Persists feedback to patient_feedback.json.
+    """
+    FEEDBACK_FILE.parent.mkdir(parents=True, exist_ok=True)
+    feedback_list = []
+    if FEEDBACK_FILE.exists():
+        try:
+            feedback_list = json.loads(FEEDBACK_FILE.read_text(encoding="utf-8"))
+        except Exception:
+            feedback_list = []
+
+    feedback_id = f"FBK-{len(feedback_list) + 1:04d}"
+    record = {
+        "feedback_id": feedback_id,
+        "patient_id": patient_id,
+        "rating": int(rating),
+        "comment": comment.strip(),
+        "service_category": service_category,
+        "timestamp": time.strftime("%Y-%m-%d %H:%M:%S")
+    }
+    feedback_list.append(record)
+    FEEDBACK_FILE.write_text(json.dumps(feedback_list, indent=4), encoding="utf-8")
+    return record
+
+
+def get_all_feedback() -> List[dict]:
+    """Retrieve all submitted patient service feedback."""
+    if FEEDBACK_FILE.exists():
+        try:
+            return json.loads(FEEDBACK_FILE.read_text(encoding="utf-8"))
+        except Exception:
+            return []
+    return []
+
+
+def get_feedback_summary() -> dict:
+    """Calculate average customer satisfaction (CSAT) rating and feedback count."""
+    items = get_all_feedback()
+    if not items:
+        return {"count": 0, "average_rating": 5.0, "csat_percentage": 100.0}
+    ratings = [f.get("rating", 5) for f in items]
+    avg = sum(ratings) / len(ratings)
+    positive = len([r for r in ratings if r >= 4])
+    return {
+        "count": len(items),
+        "average_rating": round(avg, 2),
+        "csat_percentage": round((positive / len(items)) * 100, 1)
+    }

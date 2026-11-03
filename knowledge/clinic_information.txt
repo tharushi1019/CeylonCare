@@ -3,35 +3,55 @@ CEYLONCARE HEALTH NETWORK - COMPREHENSIVE PATIENT DIRECTORY & CLINIC GUIDE
 ================================================================================
 
 1. BRANCH LOCATIONS & CONTACT DETAILS
-- Colombo Central Hospital: 124 Park Road, Colombo 05. Phone: +94 11 250 9000. Hotline: 1330.
-- Kandy Specialty Center: 45 Peradeniya Road, Kandy. Phone: +94 81 223 4500.
-- Galle Coastal Medical Center: 88 Matara Road, Galle. Phone: +94 91 224 8800.
+- Colombo Central Hospital: 124 Park Road, Colombo 05. Phone: +94 11 250 9000. Emergency Hotline: 1330.
+- Kandy Specialty Center: 45 Peradeniya Road, Kandy. Phone: +94 81 223 4500. Hotline: 1331.
+- Galle Coastal Medical Center: 88 Matara Road, Galle. Phone: +94 91 224 8800. Hotline: 1332.
 
 2. OPERATING HOURS & EMERGENCY SERVICES
-- Outpatient Clinics: Monday to Friday (8:00 AM – 6:00 PM), Saturday (8:00 AM – 1:00 PM).
-- Emergency & Trauma Care: 24/7 Operational at Colombo Central & Kandy Specialty branches.
+- Outpatient Clinics (OPD): Monday to Sunday (8:00 AM – 8:00 PM daily).
+- Emergency & Trauma Care: 24/7 Operational at Colombo Central, Kandy Specialty, and Galle Coastal branches.
 - Pharmacy & Diagnostic Labs: 24/7 at all branches.
 
-3. SPECIALIST DEPARTMENTS & CONSULTANTS
+3. PATIENT ADMISSION & VISITING HOURS
+- General Ward Visiting Hours: 11:30 AM – 1:30 PM and 5:00 PM – 7:00 PM daily. Maximum 2 visitors per patient.
+- Intensive Care Unit (ICU) Visiting Hours: 11:00 AM – 12:00 PM and 5:00 PM – 6:00 PM daily. Strictly 1 immediate family visitor allowed per patient at a time to maintain sterile conditions.
+- Neonatal Intensive Care Unit (NICU): Parents only, 12:00 PM – 2:00 PM and 4:00 PM – 6:00 PM.
+
+4. SPECIALIST DEPARTMENTS & CONSULTANTS DIRECTORY
 - Cardiology Department: Dr. K. Perera (Mon/Wed/Fri 9:00 AM - 1:00 PM), Dr. S. Fernando (Tue/Thu 2:00 PM - 6:00 PM).
 - General Medicine: Dr. N. Jayasinghe (Mon-Fri 8:30 AM - 4:30 PM), Dr. A. Silva (Mon-Sat 9:00 AM - 2:00 PM).
 - Pediatrics: Dr. M. De Silva (Tue/Thu/Sat 9:00 AM - 12:30 PM).
 - Neurology: Dr. R. Wickramasinghe (Wed/Sat 2:00 PM - 5:00 PM).
 - Dermatology: Dr. T. Abeywardena (Mon/Thu 1:00 PM - 4:00 PM).
+- Pulmonology & Respiratory Care: Dr. H. Bandara (Tue/Fri 10:00 AM - 2:00 PM).
+- Gastroenterology & General Surgery: Dr. C. Ratnayake (Mon/Wed 1:00 PM - 5:00 PM).
 
-4. APPOINTMENT BOOKING & CANCELLATION POLICIES
+5. COMMON MEDICAL CONDITIONS & PATIENT FAQS
+
+- ASTHMA & RESPIRATORY HEALTH:
+  - What is Asthma? Asthma is a chronic condition causing inflammation and narrowing of the airways, leading to wheezing, shortness of breath, chest tightness, and coughing.
+  - How is Asthma managed at CeylonCare? Treatment includes controller inhalers (corticosteroids) for daily prevention and quick-relief rescue inhalers (salbutamol) for sudden attacks.
+  - When to seek Emergency Care for Asthma? Seek immediate emergency care at CeylonCare Emergency (Hotline 1330) if you experience severe shortness of breath, inability to speak full sentences, blue lips or fingernails, or if rescue inhalers do not bring relief within 15 minutes.
+  - Pulmonology Clinic Hours: Dr. H. Bandara conducts respiratory & asthma evaluations Tuesdays and Fridays (10:00 AM - 2:00 PM).
+
+- DIABETES & METABOLIC CARE:
+  - Diabetes Care: CeylonCare offers Fasting Blood Sugar (FBS), HbA1c testing, and comprehensive diabetic screening packages.
+  - Diabetic Clinic Hours: Monday to Friday 9:00 AM - 3:00 PM at all branches.
+
+- DENGUE FEVER & HIGH FEVER GUIDANCE:
+  - Dengue Symptoms: High fever, severe headache, eye pain, joint/muscle pain, and rash.
+  - Initial Care: Stay well-hydrated with oral rehydration fluids or coconut water. Take Paracetamol for fever. DO NOT take Ibuprofen, Aspirin, or Mefenamic Acid as they increase bleeding risks in Dengue.
+  - Warning Signs: Persistent vomiting, abdominal pain, bleeding gums, or extreme lethargy require immediate hospital admission and Full Blood Count (FBC) testing.
+
+6. APPOINTMENT BOOKING & CANCELLATION POLICIES
 - Booking: Appointments can be booked up to 30 days in advance via the CeylonCare Patient Portal or Assistant Agent.
 - Rescheduling & Cancellation: Must be requested at least 2 hours prior to scheduled consultation.
 - Consultation Fees: General Consultation (LKR 2,500), Specialist Consultation (LKR 4,000 - 6,000).
 
-5. INSURANCE & PAYMENT METHODS
+7. INSURANCE & PAYMENT METHODS
 - Accepted Insurance: Ceylinco Life, Janashakthi, Softlogic Life, AIA Insurance, Sri Lanka Insurance Corporation (SLIC), Fairfirst.
 - Payment Options: Cash, Credit/Debit Cards (Visa/Mastercard), Online Bank Transfer.
 
-6. PATIENT ADMISSION & VISITORS
-- Visiting Hours: 11:30 AM – 1:30 PM and 5:00 PM – 7:00 PM daily.
-- Maximum 2 visitors per patient at any given time.
-
-7. CLINICAL SAFETY & TRIAGE DIRECTIVES
-- Severe Symptoms (chest pain, acute shortness of breath, loss of consciousness, severe trauma) are immediately routed to Emergency Triage.
+8. CLINICAL SAFETY & TRIAGE DIRECTIVES
+- Severe Symptoms (chest pain, acute shortness of breath, loss of consciousness, severe abdominal trauma) are immediately routed to Emergency Triage.
 - CeylonCare AI Assistants provide informational guidance and appointment coordination; they do not issue formal prescription diagnoses without physician evaluation.
