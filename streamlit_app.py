@@ -6,6 +6,15 @@ import time
 import pandas as pd
 from datetime import datetime, timedelta
 from langgraph.types import Command
+import os
+
+# Bridge Streamlit secrets to os.environ for LangChain / Gemini / Groq SDKs
+try:
+    for _k, _v in st.secrets.items():
+        if isinstance(_v, (str, int, float, bool)):
+            os.environ.setdefault(_k, str(_v))
+except Exception:
+    pass
 
 from src.graph import build_graph
 from src.services.patient_service import (
