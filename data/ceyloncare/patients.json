@@ -164,6 +164,21 @@
                 "Severe Atopic Dermatitis"
             ],
             "emergency_contact": "Kamal Ratnayake (Father) - 0764455667"
+        },
+        {
+            "patient_id": "P011",
+            "name": "Tharushi Nimnadi",
+            "email": "tharushinimnadi19@gmail.com",
+            "password": "19921204Ksj*",
+            "date_of_birth": "2000-10-19",
+            "phone": "0756714814",
+            "gender": "Female",
+            "city": "Colombo",
+            "blood_group": "A+",
+            "chronic_conditions": [
+                "Asthma"
+            ],
+            "emergency_contact": "Priyadarshani (Amma) - 0717876195"
         }
     ],
     "appointments": [
@@ -289,6 +304,66 @@
         },
         {
             "appointment_id": "APT-1013",
+            "patient_id": "P002",
+            "doctor": "Dr. T. Abeywardena",
+            "specialist": "Dermatologist",
+            "branch": "Colombo Central Hospital",
+            "date": "2026-12-01",
+            "time": "02:00 PM",
+            "status": "cancelled"
+        },
+        {
+            "appointment_id": "APT-1014",
+            "patient_id": "P011",
+            "doctor": "Dr. K. Perera",
+            "specialist": "Cardiologist",
+            "branch": "Colombo Central Hospital",
+            "date": "2026-11-14",
+            "time": "10:00 AM",
+            "status": "cancelled"
+        },
+        {
+            "appointment_id": "APT-1015",
+            "patient_id": "P001",
+            "doctor": "Dr. K. Perera",
+            "specialist": "Cardiologist",
+            "branch": "Colombo Central Hospital",
+            "date": "2026-12-18",
+            "time": "11:00 AM",
+            "status": "cancelled"
+        },
+        {
+            "appointment_id": "APT-1016",
+            "patient_id": "P002",
+            "doctor": "Dr. T. Abeywardena",
+            "specialist": "Dermatologist",
+            "branch": "Colombo Central Hospital",
+            "date": "2026-12-01",
+            "time": "02:00 PM",
+            "status": "cancelled"
+        },
+        {
+            "appointment_id": "APT-1017",
+            "patient_id": "P001",
+            "doctor": "Dr. K. Perera",
+            "specialist": "Dr. K. Perera",
+            "branch": "Colombo Central Hospital",
+            "date": "2026-11-15",
+            "time": "10:30 AM",
+            "status": "confirmed"
+        },
+        {
+            "appointment_id": "APT-1018",
+            "patient_id": "P001",
+            "doctor": "Dr. K. Perera",
+            "specialist": "Cardiologist",
+            "branch": "Colombo Central Hospital",
+            "date": "2026-12-18",
+            "time": "11:00 AM",
+            "status": "cancelled"
+        },
+        {
+            "appointment_id": "APT-1019",
             "patient_id": "P002",
             "doctor": "Dr. T. Abeywardena",
             "specialist": "Dermatologist",

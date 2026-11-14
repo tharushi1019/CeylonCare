@@ -130,6 +130,9 @@ if "role" not in st.session_state:
 if "quick_prompt" not in st.session_state:
     st.session_state.quick_prompt = None
 
+if "appointment_active" not in st.session_state:
+    st.session_state.appointment_active = False
+
 # ============================================================
 # AUTHENTICATION SCREEN (If not logged in)
 # ============================================================
@@ -309,6 +312,7 @@ if curr_role == "patient":
             if st.button("🔄 Clear Chat", help="Reset active chat conversation"):
                 st.session_state.messages = []
                 st.session_state.human_review = None
+                st.session_state.appointment_active = False
                 st.rerun()
 
         # Quick Action Suggested Prompts
@@ -360,6 +364,7 @@ if curr_role == "patient":
                 "user_message": user_input,
                 "patient_id": curr_user["patient_id"],
                 "chat_history": st.session_state.messages.copy(),
+                "appointment_active": st.session_state.get("appointment_active", False),
             }
 
             start_t = time.time()
@@ -376,6 +381,7 @@ if curr_role == "patient":
                 else:
                     bot_reply = result.get("final_response", "Thank you for reaching out to CeylonCare.")
                     selected_agent = result.get("selected_agent", "supervisor")
+                    st.session_state.appointment_active = result.get("appointment_active", False)
 
                 st.session_state.messages.append({
                     "role": "assistant",
